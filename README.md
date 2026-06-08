@@ -1,6 +1,6 @@
 # ⬡ CodeScan AI — AI Code Reviewer
 
-An AI-powered code reviewer built with React + Node.js + Claude API.
+An AI-powered code reviewer built with React + Node.js + Groq API.
 Detects bugs, analyzes code quality, and flags security vulnerabilities.
 
 ---
@@ -19,7 +19,7 @@ Detects bugs, analyzes code quality, and flags security vulnerabilities.
 
 ### Prerequisites
 - Node.js 18+
-- Anthropic API key → https://console.anthropic.com
+- Groq API key → https://console.groq.com
 
 ### 1. Clone / open the project
 ```bash
@@ -39,12 +39,12 @@ cd ../client && npm install
 
 **Server** — create `server/.env`:
 ```
-ANTHROPIC_API_KEY=sk-ant-your-key-here
+GROQ_API_KEY=gsk-your-key-here
 ```
 
 Or export it in your terminal:
 ```bash
-export ANTHROPIC_API_KEY=sk-ant-your-key-here
+export GROQ_API_KEY=gsk-your-key-here
 ```
 
 ### 4. Run the app
@@ -72,7 +72,7 @@ Open → **http://localhost:3000**
 ```
 ai-code-reviewer/
 ├── server/
-│   ├── index.js          # Express server + Claude API integration
+│   ├── index.js          # Express server + Groq API integration
 │   └── package.json
 ├── client/
 │   ├── public/
@@ -93,8 +93,8 @@ ai-code-reviewer/
 
 1. User pastes code and selects which features to analyze
 2. React sends a POST to `/api/review` with code + language + features
-3. Server builds a detailed prompt and streams Claude's response via SSE
-4. Claude returns structured JSON with bugs, quality issues, security findings
+3. Server builds a detailed prompt and streams Groq's response via SSE
+4. Groq returns structured JSON with bugs, quality issues, security findings
 5. Frontend renders the results with severity badges, score ring, and tabs
 
 ---
@@ -113,5 +113,5 @@ ai-code-reviewer/
 
 | Variable | Description |
 |----------|-------------|
-| `ANTHROPIC_API_KEY` | Your Anthropic API key (required) |
+| `GROQ_API_KEY` | Your Groq API key (required) |
 | `PORT` | Server port (default: 3001) |
