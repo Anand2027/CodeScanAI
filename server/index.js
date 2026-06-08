@@ -185,6 +185,10 @@ Return ONLY the complete corrected code. Nothing else.`;
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("CodeScanAI Backend Running 🚀");
+});
+
 app.get("/api/health", (req, res) => res.json({ status: "ok" }));
 
 const PORT = process.env.PORT || 3001;
