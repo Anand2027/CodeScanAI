@@ -1,0 +1,16 @@
+{
+  "name": "ai-code-reviewer",
+  "version": "1.0.0",
+  "description": "AI-powered code reviewer with bug detection, quality analysis, and security scanning",
+  "scripts": {
+    "install:all": "cd server && npm install && cd ../client && npm install",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm start",
+    "start:server": "cd server && npm start",
+    "start:client": "cd client && npm start"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-keywords": "^5.1.0"
+  }
+}
